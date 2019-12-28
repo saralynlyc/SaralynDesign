@@ -10,47 +10,87 @@
 <style>
 h1{
 	color: #000000;
-	font-size: 70px;
+	font-size: 42px;
 	text-align: center;
+	margin: 5px;
+	padding: 5px;
 }
 h2{
-	font-size: 32px;
+	font-size: 24px;
+	text-align: center;
+	margin: 5px;
+	padding: 5px;
+}
+}
+
+h3{
+	font-size: 20px;
 	text-align: center;
 }
 
+h4{
+	font-size: 16px;
+	text-align: left;
+	margin: 5px;
+	padding: 5px;
+}
 body{
 	background-position: center;
 	background: #fafafa;
-	background-size: 100em, 100em;
 	color: #666666;
 	font-family: genjyuu;
+	margin: 0px;
 }
 
 p{ 
 	font-size: 16px;
-	text-align: left;	
+	text-align: left;
+	padding:20px;
+}
+
+li{ 
+	font-size: 16px;
+	text-align: left;
+	padding: 5px;
+	margin: 5px;	
 }
 
 img{
 	width: 100%;
 	height: 100%;
-	-webkit-border-radius: 10px;
-	-ms-border-radius: 10px;
-	-o-border-radius: 10px;
 }
 
-	
-input{
+
+.form{
+	padding: 20px;
+	margin: 20px;
+	border: 20px;
+}
+
+input{ 
+	border: 0px;
+	border-radius: 5px;	
+	padding: 10px;
+	font-size: 14px;
+}
+
+textarea{
+	height: 100px;
 	border: 0px;
 	border-radius: 5px;
 	padding: 10px;
-	font-size: 16px;
+	font-size: 14px;
 }
-	input[type="submit"]{
+
+input[type="submit"]{
+		width:100%; 
+		border: 0px;
+		border-radius: 5px;
+		padding: 10px;
 		background: #F6DDCE;
 		color: #666666;
-		font-size: 16px;
 }
+
 
 </style>
 
@@ -64,10 +104,20 @@ input{
 	<h2>SaraLyn的專案作品</h2>
 		<li>My Design</li>
 		<li>My Articles</li>
-	</p>
-	<h2>了解更多SaraLyn</h2>
-	<input type="email" placeholder="輸入信箱">
-	<input type="submit">
+	
+	<h2>聯繫Sara</h2>
+
+<div class="form" id="contact" action="https://formspree.io/saralyn.lyc@gmail.com" method="post">
+
+    <h4 for="full-name">聯絡姓名</h4>
+    <input type="text" name="name" id="full-name" placeholder="想要怎麼被稱呼?">
+    <h4 for="email-address">聯絡信箱</h4>
+    <input type="email" name="_replyto" id="email-address" placeholder="請輸入你的信箱">
+    <h4 for="message">信件內容</h4>
+    <textarea rows="1" name="message" id="message" placeholder="有甚麼想跟我說的?"></textarea></br></br>
+	<input type="submit" value="確認送出">
+</div>
+
 
 </body>
 </html>
